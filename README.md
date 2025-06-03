@@ -124,3 +124,26 @@ console.log(genres);
 ✔ **One-to-One** → `User.hasOne(Profile)`  
 ✔ **One-to-Many** → `Author.hasMany(Book)`  
 ✔ **Many-to-Many** → `Book.belongsToMany(Genre, { through: 'BookGenres' })`  
+
+---
+
+# File removal from github
+Agar koi file aapne galti se github pe upload kar di hai like **.env** or **.env.test**, to usko git hub se hatane ki commands niche di gayi hai:
+Note: in commands ko chalane se pahle apna sara code github upload kar do
+
+```
+# 1. Remove it from the repository (not from your local)
+git rm --cached .env.test
+
+# 2. Commit the removal
+git commit -m "Remove .env.test from version control"
+
+# 3. Rewrite entire git history to remove it from all past commits
+git filter-branch --force --index-filter \
+  "git rm --cached --ignore-unmatch .env.test" \
+  --prune-empty --tag-name-filter cat -- --all
+
+# 4. Force push to GitHub
+git push origin --force --all
+
+```
