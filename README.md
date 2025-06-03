@@ -128,8 +128,8 @@ console.log(genres);
 ---
 
 # File removal from github
-Agar koi file aapne galti se github pe upload kar di hai like **.env** or **.env.test**, to usko git hub se hatane ki commands niche di gayi hai:
-Note: in commands ko chalane se pahle apna sara code github upload kar do
+ - Agar koi file aapne galti se github pe upload kar di hai like **.env** or **.env.test**, to usko git hub se hatane ki commands niche di gayi hai:
+ - Note: in commands ko chalane se pahle apna sara code github upload kar do
 
 ```
 # 1. Remove it from the repository (not from your local)
