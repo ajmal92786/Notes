@@ -147,3 +147,22 @@ git filter-branch --force --index-filter \
 git push origin --force --all
 
 ```
+
+---
+
+# Edit commit message
+ - Agar aapne **git add .** and **git commit -m "message"** command chala di hai but aapko commit message edit karna hai to use following commands:
+
+```
+git commit --amend -m "Naya message yahan likho"
+```
+#### Note:
+ - Ye sirf last commit ka message change karega.
+ - Agar tumne push nahi kiya hai GitHub pe, to koi dikkat nahi.
+ - Agar push kar diya hai, to uske baad force push karna padega:
+
+```
+git push --force
+```
+(Par force push tabhi karo jab pata ho ki koi aur us repo par kaam nahi kar raha.)
+
